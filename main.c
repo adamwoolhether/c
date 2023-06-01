@@ -223,5 +223,34 @@ int main() {
     printf("%d\n", strcmp(hello, hello2));  // Returns 0 (the strings are equal)
     printf("%d\n", strcmp(hello, hi));  // Returns -4 (the strings are not equal)
 
+    // Demonstrate user input
+   /* int inputNum;
+    printf("Type a number: \n");
+    scanf("%d", &inputNum);
+    printf("Your number is: %d\n", inputNum);
+
+    // We can also do multiple inputs.
+    int newInputNum;
+    char myChar;
+
+    printf("Type a number and a character and press enter: \n");
+    scanf("%d %c", &myNum, &myChar);
+    printf("Your number is: %d\n", newInputNum);
+    printf("Your character is: %c\n", myChar);
+
+    // Taking string input
+    char firstName[30]; // rememver to specify the size
+    printf("Enter your first name: \n");
+    scanf("%s", firstName);
+    printf("Hello %s\n", firstName);
+
+    // scanf has limitations. newline/space will be interpreted as EOF.
+    // we need to use fgets() for reading lines.
+
+    char fullName[30];
+    printf("Type your full name: \n");
+    fgets(fullName, sizeof(fullName), stdin);
+    printf("Hello %s\n", fullName);*/
+
     return 0;
 }
