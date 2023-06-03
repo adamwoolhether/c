@@ -252,5 +252,41 @@ int main() {
     fgets(fullName, sizeof(fullName), stdin);
     printf("Hello %s\n", fullName);*/
 
+    // & reference operator used to access mem address. just like go.
+    // and pointers
+    int someNewAge = 88;
+    printf("someNewAge %p\n", &someNewAge); // prints the memory address
+    printf("someNewAge %d\n", someNewAge); // prints the value
+
+    int someInt = 22;
+    int *ptr = &someInt;
+
+    printf("%d\n", someInt);
+    printf("%p\n", &someInt);
+    printf("%p\n", ptr);
+
+    // de-referencing pointers, just like go
+    printf("%d\n", *ptr);
+
+    // pointers and arrays
+    int someNums[4] = {25, 69, 24, 10};
+    int idx;
+    for (idx = 0; idx < 4; idx++) {
+        printf("%d\n", someNums[idx]);
+    }
+
+    idx = 0;
+    for (idx = 0; idx < 4; idx++) {
+        printf("%d\n", &someNums[idx]);
+    }
+    printf("sizeof someNums: %lu\n", sizeof(someNums)); // ints have a size of 4
+
+    // Array names are actually a pointer to the first element of the array.
+    printf("%d\n", someNums);
+    printf("%d\n", &someNums[0]); // same as above.
+
+    // So, we can work with arrays through pointers.
+    printf("%d\n", *someNums); // prints the value of the first element.
+
     return 0;
 }
