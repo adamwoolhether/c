@@ -288,5 +288,22 @@ int main() {
     // So, we can work with arrays through pointers.
     printf("%d\n", *someNums); // prints the value of the first element.
 
+    // Use +1, +2, etc to access the other elements.
+    printf("%d\n", *(someNums + 1)); // print second element
+    printf("%d\n", *(someNums + 2)); // print third element
+
+    // loop through it
+    int *somePtr = someNums;
+    for (i = 0; i < 4; i++) {
+        printf("%d\n", *(somePtr + i));
+    }
+
+    // to change the value of elements:
+    int someArray[4] = {13, 77, 62, 43};
+    *someArray = 13; // Change value of first element.
+    *(someArray + 1) = 17; // change value of second element.
+    printf("%d\n", *someArray);
+    printf("%d\n", *(someArray + 1));
+
     return 0;
 }
